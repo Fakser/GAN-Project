@@ -52,3 +52,8 @@ to find such hyperparameters that 99,99% of time my GAN will be trained create a
 nice approximation of the dataset.
 
 Thats all, bye.
+
+References:
+https://www.tensorflow.org/tutorials/generative/dcgan
+https://www.kaggle.com/splcher/animefacedataset
+https://developers.google.com/machine-learning/gan/loss
