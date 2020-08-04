@@ -17,7 +17,7 @@ a part of some bigger project, or i will train a
 GAN that generates random memes. Who cares.
 
 #### Deep Convolutional Generative Adversarial Network
-or or whatever it is called there, is an interesting type
+or whatever it is called there, is an interesting type
 of machine learning model, as it actually consists of two models.
 These are professionally called generator and discriminator.
 But I prefer to call them 
