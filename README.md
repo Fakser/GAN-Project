@@ -45,8 +45,9 @@ some block diagram for no purpose:
 ![png 3](./to_readme/GAN_block_diagram.png)
 
 So yeah, that's how it works.
-For some mathematitians here: I am currently experimenting with different loss functions
-to minimize the mode collapse. As it should be a fully automated process of training I want 
+For some mathematicians here: I am currently experimenting with different loss functions
+like wasserstien discriminator loss function to minimize the mode collapse problem. 
+As it should be a fully automated process of training I want 
 to find such hyperparameters that 99,99% of time my GAN will be trained create at least
 nice approximation of the dataset.
 
