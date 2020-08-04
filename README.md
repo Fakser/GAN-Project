@@ -54,6 +54,4 @@ nice approximation of the dataset.
 Thats all, bye.
 
 References:
-https://www.tensorflow.org/tutorials/generative/dcgan
-https://www.kaggle.com/splcher/animefacedataset
-https://developers.google.com/machine-learning/gan/loss
+https://www.tensorflow.org/tutorials/generative/dcgan <br/>                                                                               https://www.kaggle.com/splcher/animefacedataset <br/>                                                                                               https://developers.google.com/machine-learning/gan/loss
