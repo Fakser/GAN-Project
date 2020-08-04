@@ -48,7 +48,7 @@ some block diagram for no purpose:
 So yeah, that's how it works.
 For some mathematitians here: I am currently experimenting with different loss functions
 to minimize the mode collapse. As it should be a fully automated process of training I want 
-to find such hyperparameters taht 99,99% of time my GAN will be trained create at least
+to find such hyperparameters that 99,99% of time my GAN will be trained create at least
 nice approximation of the dataset.
 
 Thats all, bye.
