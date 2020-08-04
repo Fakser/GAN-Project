@@ -1,5 +1,4 @@
 # GAN-Project
-# GAN-Project
 
 You heard of gans? GANS. Sounds like guns, cool.
 
