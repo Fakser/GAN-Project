@@ -1,10 +1,10 @@
-from Gan.controller import  *
-from Gan.losses import *
-from Gan.data_load import data_load
+from src.controller import  *
+from src.Gan.losses import *
+from src.data_load import data_load
 
 
 class Gan(object):
-    def __init__(self, img_shape = IMG_SHAPE, train_type = 'normal' ,noise_shape = 128, train_data_size = 0.5, batch_size = 256, buffer_size = 60000, generator_loss = generator_loss, discriminator_loss = discriminator_loss, discriminator_type = 'discriminator'):
+    def __init__(self, data_path = './Data/anime_faces/', img_shape = IMG_SHAPE,  data_dimensions = 3, train_type = 'normal' ,noise_shape = 128, train_data_size = 0.5, batch_size = 256, buffer_size = 60000, generator_loss = generator_loss, discriminator_loss = discriminator_loss, discriminator_type = 'discriminator'):
         
         """GAN Class init function.
 
@@ -24,7 +24,7 @@ class Gan(object):
         self.n_epochs = 0
         self.generator = tf.keras.models.Sequential()
         self.discriminator = tf.keras.models.Sequential()
-        self.data_dimensions = data_load(MAX_DATASET_SIZE = 1).shape[3]
+        self.data_dimensions = data_load(path = data_path, MAX_DATASET_SIZE = 1).shape[3]
         
         if img_shape[0]!=img_shape[1] or is_multiple_of_2(img_shape[0]) == False or is_multiple_of_2(img_shape[1]) == False:
             print('dupa')
@@ -33,7 +33,7 @@ class Gan(object):
             self.img_shape = img_shape
         
         self.curr_shape = (32,32)
-        
+        self.data_path = data_path
         self.noise_shape = noise_shape
         self.BUFFER_SIZE = buffer_size
         self.BATCH_SIZE = batch_size
@@ -191,7 +191,7 @@ class Gan(object):
 
     def train(self, epochs, last_epoch = 0):
         if self.train_type == 'normal':
-            train_data = data_load(IMG_SHAPE = self.curr_shape)
+            train_data = data_load(path = self.data_path, IMG_SHAPE = self.curr_shape)
             batched_data = tf.data.Dataset.from_tensor_slices(train_data).shuffle(self.BUFFER_SIZE).batch(self.BATCH_SIZE, drop_remainder = True)
             del train_data
             for epoch in range(epochs):
@@ -213,7 +213,7 @@ class Gan(object):
         else:
             n_of_increases = int(math.log(self.img_shape[0], 2) - 5) + 1
             for increase in range(n_of_increases):
-                train_data = data_load(IMG_SHAPE = self.curr_shape)
+                train_data = data_load(path = self.data_path, IMG_SHAPE = self.curr_shape)
                 batched_data = tf.data.Dataset.from_tensor_slices(train_data).shuffle(self.BUFFER_SIZE).batch(self.BATCH_SIZE, drop_remainder = True)
                 del train_data
                 for epoch in range(int(epochs/n_of_increases)):
@@ -227,7 +227,7 @@ class Gan(object):
                                                 self.seed)
 
                     # Save the model every 15 epochs
-                    if (epoch + 1) % 15 == 0:
+                    if (epoch + 1) % 100 == 0:
                         self.checkpoint.save(file_prefix = self.checkpoint_prefix)
                     self.n_epochs += 1
                     print ('Time for epoch {} is {} sec'.format(epoch + 1, time.time()-start), 'current images shape: ', self.curr_shape)

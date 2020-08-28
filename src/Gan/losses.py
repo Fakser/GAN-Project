@@ -1,4 +1,4 @@
-from Gan.controller import tf
+from src.controller import tf
 
 def is_multiple_of_2(x):
     """
