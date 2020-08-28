@@ -3,12 +3,12 @@
 You heard of gans? GANS. Sounds like guns, cool.
 
 ![gif 1](./to_readme/dcgan.gif)
-
+![gif 2](./to_readme/dcgan_second_train.gif)
 ## So I've trained my own Gan. The end.
 
 but wait, there is another.
 
-![gif 2](./to_readme/dcgan_color_first_train.gif)
+![gif 3](./to_readme/dcgan_color_first_train.gif)
 
 As you can probably see, I am prepearing my own private 
 library for automated GAN training. It may be 
