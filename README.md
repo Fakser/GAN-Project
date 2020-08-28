@@ -8,7 +8,7 @@ You heard of gans? GANS. Sounds like guns, cool.
 
 but wait, there is another.
 
-![gif 2](./to_readme/dcgan_second_train.gif)
+![gif 2](./to_readme/dcgan_color_first_train.gif)
 
 As you can probably see, I am prepearing my own private 
 library for automated GAN training. It may be 
