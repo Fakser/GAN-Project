@@ -33,6 +33,8 @@ But he is actually colorblind so he only uses gray.
 
 ![png 2](./to_readme/gray_anime_girl.png)
 
+(Btw he is not colorblind anymore, he understands colors now)
+
 But oh wait, our Artist never actually painted anime girl. 
 He actually never painted anything. That is why we have our Critique.
 Critique has an access to database of pictures of cute anime girls
